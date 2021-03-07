@@ -9,7 +9,7 @@ RUN apt-get update -y && \
         git \
         ffmpeg && \
     git clone https://github.com/jattpawan/evilbot.git && \
-    cd evilbott && \
+    cd evilbot && \
     git clone https://github.com/pytgcalls/pytgcalls.git && \
     cd pytgcalls && \
     npm install && \
