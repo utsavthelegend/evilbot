@@ -1,5 +1,5 @@
 {
-    "name": "evilbot",
+    "name": "MusicBot",
     "description": "An Open-source PyTgCalls based Pyrogram bot to play music in voice chats",
     "keywords": [
       "telegram",
