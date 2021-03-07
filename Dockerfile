@@ -18,9 +18,9 @@ RUN apt-get update -y && \
     npm install && \
     cd ../../ && \
     pip3 install -r requirements.txt && \
-    cp -r ./pytgcalls /MusicBot/ && \
-    cd /MusicBot && \
+    cp -r ./pytgcalls /evilbot/ && \
+    cd /evilbot && \
     pip3 install -U -r requirements.txt
 
-WORKDIR /MusicBot
+WORKDIR /evilbot
 CMD ["python3" "main.py"]
