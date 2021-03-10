@@ -40,7 +40,7 @@ async def start(client: Client, message: Message):
         )
     )
     
-    @Client.on_message(
+@Client.on_message(
     filters.command("repo")
     & filters.private
     & ~ filters.edited
