@@ -1,8 +1,8 @@
-from pyrogram import Client, filters
-from pyrogram.types import Message
 
 import asyncio, time, os, asyncio, json
 from telethon.tl.types import DocumentAttributeAudio
+from Evilbot.events import register
+from Evilbot.utils import progress
 from youtube_dl import YoutubeDL
 from youtube_dl.utils import (DownloadError, ContentTooShortError,
 
@@ -13,14 +13,11 @@ try:
    from youtubesearchpython import SearchVideos 
 
 except:
-	os.system("pip install youtube-search-python")
+	os.system("pip install pip install youtube-search-python")
 	from youtubesearchpython import SearchVideos 
 	pass
 
-@Client.on_message(
-    filters.command("song")
-    & filters.private
-)
+@register(pattern="^/song (.*)")
 async def download_video(v_url):
 
     lazy = v_url ; sender = await lazy.get_sender() ; me = await lazy.client.get_me()
@@ -140,10 +137,7 @@ async def download_video(v_url):
         os.remove(f"{rip_data['id']}.mp4")
 
 
-@Client.on_message(
-    filters.command("video")
-    & filters.private
-)
+@register(pattern="^/video (.*)")
 async def download_video(v_url):  
     lazy = v_url ; sender = await lazy.get_sender() ; me = await lazy.client.get_me()
     if not sender.id == me.id:
