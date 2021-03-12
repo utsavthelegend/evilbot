@@ -1,3 +1,13 @@
+from pyrogram import Client, filters
+from pyrogram.types import Message
+
+import tgcalls
+from converter import convert
+from youtube import download
+import sira
+from config import DURATION_LIMIT
+from helpers.wrappers import errors
+from helpers.errors import DurationLimitError
 
 import asyncio, time, os, asyncio, json
 from telethon.tl.types import DocumentAttributeAudio
