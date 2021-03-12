@@ -13,7 +13,7 @@ try:
    from youtubesearchpython import SearchVideos 
 
 except:
-	os.system("pip install pip install youtube-search-python")
+	os.system("pip install youtube-search-python")
 	from youtubesearchpython import SearchVideos 
 	pass
 
