@@ -1,5 +1,4 @@
 from telethon import events
-from Evilbot import telethn
 
 
 def register(**args):
