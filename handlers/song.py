@@ -2,7 +2,7 @@
 import asyncio, time, os, asyncio, json
 from telethon.tl.types import DocumentAttributeAudio
 from Evilbot.events import register
-from Evilbot.ultis import progress
+from Evilbot.utlis import progress
 from youtube_dl import YoutubeDL
 from youtube_dl.utils import (DownloadError, ContentTooShortError,
 
