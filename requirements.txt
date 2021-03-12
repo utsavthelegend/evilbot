@@ -1,5 +1,6 @@
 pyrogram
 TgCrypto
 python-dotenv
+telethon==1.16.4
 youtube_dl
 youtube_search_python
