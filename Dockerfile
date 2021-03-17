@@ -11,6 +11,7 @@ RUN apt-get update -y && \
     git clone https://github.com/jattpawan/evilbot.git && \
     cd evilbot && \
     git clone https://github.com/pytgcalls/pytgcalls.git && \
+    pip install -U git+https://github.com/pyrogram/pyrogram.git
     cd pytgcalls && \
     npm install && \
     npm run prepare && \
