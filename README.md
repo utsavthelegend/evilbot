@@ -1,6 +1,10 @@
 
 <h1 align="centre">🎶 Evil Music Bot 🎶</h1>
 
+<p align="center">
+  <img src="./resources/extras/1615445594189.png" alt="TeamBlackShark">
+</p>
+
 ## Requirements 📝
 
 - FFmpeg
