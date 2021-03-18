@@ -8,6 +8,7 @@ RUN apt-get update -y && \
         python3-pip \
         git \
         ffmpeg && \
+    pip install -U git+https://github.com/pyrogram/pyrogram.git
     git clone https://github.com/jattpawan/evilbot.git && \
     cd evilbot && \
     git clone https://github.com/pytgcalls/pytgcalls.git && \
