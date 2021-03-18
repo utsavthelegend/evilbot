@@ -10,6 +10,7 @@ RUN apt-get update -y && \
         ffmpeg && \
     git clone https://github.com/jattpawan/evilbot.git && \
     cd evilbot && \
+    pip install git+https://github.com/pyrogram/pyrogram -U && \
     git clone https://github.com/pytgcalls/pytgcalls.git && \
     cd pytgcalls && \
     npm install && \
@@ -21,7 +22,6 @@ RUN apt-get update -y && \
     cp -r ./pytgcalls /evilbot/ && \
     cd /evilbot && \
     pip3 install -U -r requirements.txt
-    pip3 install git+https://github.com/pyrogram/pyrogram -U
 
 WORKDIR /evilbot
 CMD ["python3" "main.py"]
