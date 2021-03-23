@@ -1,7 +1,6 @@
 {
     "name": "evilbott",
     "description": "An Open-source PyTgCalls based Pyrogram bot to play music in voice chats",
-    "logo": "https://telegra.ph/file/99afe853eb142eb6b5470.jpg",
     "keywords": [
       "telegram",
       "voicechat",
@@ -39,6 +38,29 @@
         "description": "Maximum duration of songs that users can request(in minutes).",
         "value": "10",
         "required": false
-      }
+       },
+        "OWNER_ID": {
+            "description": "Your telegram user id.",
+            "required": true
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "addons": [
+        {
+            "plan": "heroku-postgresql",
+            "options": {
+                "version": "12"
+            }
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
     }
 }
