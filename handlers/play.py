@@ -16,7 +16,7 @@ from helpers.errors import DurationLimitError
     & ~ filters.edited
 )
 async def play_(client: Client, message: Message):
-    await message.reply_text("**êvilẞø†:** Sorry! I can only be used in groups. \nTry again in a group.")
+    await message.reply_text("**𝕳𝖎𝖒𝖎 𝕸𝖊𝖑𝖔𝖉𝖎𝖊𝖘:** Sorry! I can only be used in groups. \nTry again in a group.")
 
 
 @Client.on_message(
@@ -28,7 +28,7 @@ async def play_(client: Client, message: Message):
 async def play(client: Client, message_: Message):
     audio = (message_.reply_to_message.audio or message_.reply_to_message.voice) if message_.reply_to_message else None
 
-    res = await message_.reply_text("**êvilẞø†:** 🔄 Processing...")
+    res = await message_.reply_text("**𝕳𝖎𝖒𝖎 𝕸𝖊𝖑𝖔𝖉𝖎𝖊𝖘:** 🔄 Processing...")
 
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
@@ -59,7 +59,7 @@ async def play(client: Client, message_: Message):
                         break
 
         if offset == None:
-            await res.edit_text("**êvilẞø†:**❕ You did not give me anything to play.")
+            await res.edit_text("**𝕳𝖎𝖒𝖎 𝕸𝖊𝖑𝖔𝖉𝖎𝖊𝖘:**❕ You did not give me anything to play.")
             return
 
         url = text[offset:offset+length]
@@ -74,8 +74,8 @@ async def play(client: Client, message_: Message):
 
     if is_playing:
         position = await sira.add(message_.chat.id, file_path)
-        await res.edit_text(f"**êvilẞø†:** #️⃣ Queued at position {position}.")
+        await res.edit_text(f"**𝕳𝖎𝖒𝖎 𝕸𝖊𝖑𝖔𝖉𝖎𝖊𝖘:** #️⃣ Queued at position {position}.")
 
     else:
-        await res.edit_text("**êvilẞø†:** ▶️ Playing...")
+        await res.edit_text("**𝕳𝖎𝖒𝖎 𝕸𝖊𝖑𝖔𝖉𝖎𝖊𝖘:** ▶️ Playing...")
         tgcalls.pytgcalls.join_group_call(message_.chat.id, file_path, 48000)
